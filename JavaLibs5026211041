@@ -1,0 +1,88 @@
+import javax.swing.*;
+
+class JavaLibs5026211041 {
+    public static void main(String[] args) {
+
+        //1
+        String name = JOptionPane.showInputDialog("Hallo! Kenalan dulu yukk ! Namamu siapa?");
+        JOptionPane.showMessageDialog(null, "Hai! "+name+", Salam kenal ya!!.");
+
+        //2
+        String[] acceptablevalues = {"cowok" , "cewek"};
+        String gender = (String)JOptionPane.showInputDialog(null, "Kamu", "jenis kelamin",2,null,acceptablevalues,acceptablevalues[1]);
+        JOptionPane.showMessageDialog(null, "Oh, ternyata kamu "+gender+".");
+
+        //3
+        String age = JOptionPane.showInputDialog("Umur kamu berapa?");
+        int ageConvert=Integer.parseInt(age);
+        if ( ageConvert > 30 ) {
+            JOptionPane.showMessageDialog(null, "Wahh kamu lebih tua ya dari aku xixi, haloo kakak");
+        } else if ( ageConvert == 19 ) {
+            JOptionPane.showMessageDialog(null, " Wih "+name+" kita seumuran lho.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Wahh masih muda ya masih umur"+age+".");
+        }
+
+        //4
+        String School=JOptionPane.showInputDialog("Apa kamu juga anak ITS ? |1 = Iya 2 = Tidak|");
+        int SchoolConvert=Integer.parseInt(School);
+        if (SchoolConvert == 1 ){
+            JOptionPane.showMessageDialog(null," Haii "+name+" KITA SEKAMPUS NIIH");
+        }else if (SchoolConvert == 2 ) {
+            JOptionPane.showInputDialog(null, "Ohh hai kamu dari kampus mana?");
+		JOptionPane.showMessageDialog(null, "Wahh "+name+", Kamu dari sana!!");
+        }
+
+        //5
+        String mood=JOptionPane.showInputDialog("Gimana nih perasaan kamu hari ini? Bisa beri nilai 1-100.");
+        int moodconvert=Integer.parseInt(mood);
+        if ( moodconvert > 85 ) {
+            JOptionPane.showMessageDialog(null, "Wah kelihatanya hari ini mood kamu baik ya! Biar tambah luar biasa yuk main bareng!");
+        } else if ( moodconvert == 50 ) {
+            JOptionPane.showMessageDialog(null, "WAHH "+name+"  Masih mood biasa nihh. Yuk main bareng aku biar mood kamu bertambah!");
+        } else if ( moodconvert > 50) {
+            JOptionPane.showMessageDialog(null, "Hmm, masih kurang baik nih mood kamu. Mau nambah baik? Yuk main bareng aku!");
+        } else {
+            JOptionPane.showMessageDialog(null, "Hmmm, jangan sedih. Yuk aku temenin main bareng biar mood kamu balik lagi!");
+        }
+
+        //move
+        JOptionPane.showMessageDialog(null, "Jadi, game kali ini namanya HALU GAME");
+	JOptionPane.showMessageDialog(null, "MARI BERHALU BERSAMAKU WKWK. Let's go...");
+
+        //6-7 Kecocokan
+        String tanya1 = JOptionPane.showInputDialog("Coba deh masukin nama orang yang kamu suka");
+        String Ideal=JOptionPane.showInputDialog("Kamu suka pasangan kamu yang seperti apa ? |1 = Humoris 2 = Romantis|");
+        int IdealConvert=Integer.parseInt(Ideal);
+        if (IdealConvert == 1 ){
+            JOptionPane.showMessageDialog(null," Wahh "+name+" suka orang yang humoris ya..");
+        }else if (IdealConvert == 2 ) {
+		JOptionPane.showMessageDialog(null, "Wahh "+name+", suka orang yang romantis ya..");
+        }
+
+	//8-9 Kencan
+	String tanya2 = JOptionPane.showInputDialog("Sekarang coba masukin bunga favorit kamu");
+        String tanya3 = JOptionPane.showInputDialog("Kira-kira kalau kamu mau jalan-jalan bareng pasangan mau kemana?");
+        JOptionPane.showMessageDialog(null,"Hmm, kamu suka tempat itu..");
+        String tanya4 = JOptionPane.showInputDialog("Nah, yang terakhir. Apa kamu setuju berkencan dengan "+tanya1+"|1 = IYA 2 = TIDAK|");
+        int tanya4Convert=Integer.parseInt(tanya4);
+        if (tanya4Convert == 1 ){
+            JOptionPane.showMessageDialog(null,"Selamat berkencan...");
+	       JOptionPane.showMessageDialog(null, "Wait! Aku punya pesan nih dari pasangan kamu. Kamu mau lihat?");
+               JOptionPane.showMessageDialog(null, "Dear My Lovely "+name+" ini hanyalah sebuah pesanku untukmu.");
+	       JOptionPane.showMessageDialog(null, "Pesan ini tidak sebanding dengan kenangan kencan kita kemarin.");
+               JOptionPane.showMessageDialog(null, "Kencan kita kemarin di "+tanya3+" sangatlah luar biasa."); 
+	       JOptionPane.showMessageDialog(null, "Aku seneng banget bisa mengenal "+name+" . Waktu kamu aku kasih bunga "+tanya2+" kamu bahagia sekali."); 
+               JOptionPane.showMessageDialog(null, "Aku seneng deh melihat kamu tersenyum seperti itu. Ketika kamu panggil nama aku "+tanya1+" hatiku langsung deg-degan banget."); 
+               JOptionPane.showMessageDialog(null, "Terima kasih sudah mau bersama aku."); 
+	       JOptionPane.showMessageDialog(null, "Oh iya, ada satu pesan lagi nihh!!");
+	       JOptionPane.showMessageDialog(null, "I LOVE YOU "+name+" I HOPE WE ALWAYS TOGETHER~"+tanya1+".");
+        }else if (tanya4Convert == 2 ) {
+		JOptionPane.showMessageDialog(null, "Yahh, kamu ngga mau. Gapapa dehh..");
+	}
+
+        //end
+        JOptionPane.showMessageDialog(null, "Thank you ya,"+name+". Udah main bareng aku. Kalo mau halu bisa nih diulang lagi xixi. Tetap semangat dan stay safe!!");
+
+    }
+}
